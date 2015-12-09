@@ -1,0 +1,33 @@
+/* submain section */
+#submain {
+    padding:0 20px;
+}
+#subcontent {
+    overflow:hidden;
+    padding:20px 0;
+}
+#subcontent #left {
+    float:left;
+    width:70%;
+}
+#subcontent #left h3 {
+    padding:0px 0 24px;
+    border-bottom:1px solid /* #e7e7e7 */#ccc8cb;
+}
+/* #subcontent #left span {
+    color:#242424;
+    font-size:20px;
+} */
+#subcontent #left p {
+	padding:0px 0 32px;
+	border-bottom:1px solid #ccc8cb;
+}
+#subcontent #right {
+    float:left;
+    margin-left:2%;
+    width:28%;
+}
+#subcontent ul li {
+    margin-bottom:2px;
+    overflow:hidden;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>own blog-note_detail page</title>
+<meta charset="utf-8">
+
+<!-- Link styles -->
+<link rel="stylesheet" href="css/reset.css" type="text/css"
+	media="screen">
+<link rel="stylesheet" href="css/common.css" type="text/css"
+	media="screen">
+<link rel="stylesheet" href="css/detail.css" type="text/css"
+	media="screen">
+
+<!-- Link scripts -->
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/common.js" type="text/javascript"></script>
+<script src="js/detail.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+	<div class="container">
+
+		<!-- 页面头 -->
+		<div id="header"></div>
+
+		<!--导航栏-->
+		<div id="nav"></div>
+
+		<div id="submain">
+			<section id="subcontent">
+
+				<!-- 左侧列表 -->
+				<div id="left">
+					<ul id="list"></ul>
+					<div id="comment_list"></div><!-- 评论列表 -->
+					<div id="comment_form_container"><!-- 评论区 -->
+						<div id="comment_title"><h2 style='font-size:24px;'>COMMENT&nbsp;AREA</h2></div>
+						<span style='font-size:14px;color:black;'>NickName:<input type="text" id="nickName" size="20" value="">&nbsp;&nbsp;&nbsp;&nbsp;
+						e-mail:<input type="text" id="email" size="20" value=""></span>
+						<div class="comment_box">
+							<div class="comment_box_title">
+								<div class="comment_box_content"><span style='font-size:14px;color:black;'>Comment Content:</span></div>
+							</div>
+							<div class="clear"></div>
+							<textarea id="comment_content" rows="10" cols="78"></textarea>
+						</div>
+						<div id="comment_submit">
+							<input id="submit" type="button" class="comment_btn" value="观点提交">
+						</div>
+					</div>
+				</div>
+
+				<!-- 右侧栏目 -->
+				<div id="right"></div>
+			</section>
+		</div>
+
+		<!-- 页脚 -->
+		<div id="footer"></div>
+	</div>
+</body>
+</html>

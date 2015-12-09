@@ -1,0 +1,46 @@
+/* submain section */
+#submain {
+	padding: 0 20px;
+}
+
+#subcontent {
+	overflow: hidden;
+	padding: 20px 0;
+}
+
+#subcontent #left {
+	float: left;
+	width: 70%;
+}
+
+#subcontent #left ul li a:hover h3 {
+	color: #C24050;
+}
+
+#subcontent #left ul li p {
+	color: black;
+	font-size: 14px;
+}
+/*每行之间的分隔线*/
+#subcontent #left p {
+	padding: 0px 0 28px;
+	border-bottom: 1px solid #ccc8cb/* #B4EEB4 */;
+}
+
+#subcontent #right {
+	float: left;
+	margin-left: 2%;
+	width: 28%;
+}
+
+#subcontent ul li {
+	margin-bottom: 2px;
+	overflow: hidden;
+}
+
+#subcontent ul li img {
+	float: left;
+	height: 128px;
+	margin: 5px 20px 5px 0;
+	width: 128px;
+}
