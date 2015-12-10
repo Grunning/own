@@ -8,7 +8,7 @@ import com.jfinal.core.Controller;
 
 public class NoteController extends Controller {
 
-	private final int PAGE_NUM = 5;
+	private final int PAGE_NUM = 3;
 	
 	// 条件查询
 	@ActionKey("/noteDetail")
@@ -30,6 +30,8 @@ public class NoteController extends Controller {
 		sql.append(getPara("tid"));
 		if(getParaToInt("subType") != -1)
 			sql.append(" and blog_subtype_id=" + getParaToInt("subType"));
+		sql.append(" limit " + (getParaToInt("currentPage") - 1) * PAGE_NUM
+				+ "," + PAGE_NUM);
 		renderJson("noteList", Blog.blog.find(sql.toString()));
 	}
 	

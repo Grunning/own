@@ -7,16 +7,28 @@ var typeId;
 var subTypeId;
 var strs = new Array();
 
+var noteListCurrentPage;//笔记列表当前页
+
 $(document).ready(function() {
 
 	/**获得请求参数值*/
 	if(url.indexOf('&')>-1) {
 		strs = url.split("&");
-		typeId = strs[0].trim().split("=")[1];
-		subTypeId = strs[1].trim().split("=")[1];
+		if(strs.length == 2) {
+			if(strs[1].trim().split("=")[0] == "subTypeId") {
+				typeId = strs[0].trim().split("=")[1];
+				subTypeId = strs[1].trim().split("=")[1];
+				noteListCurrentPage = 1;
+			}else if(strs[1].trim().split("=")[0] == "page") {
+				typeId = strs[0].trim().split("=")[1];
+				noteListCurrentPage = strs[1].trim().split("=")[1];
+				subTypeId = -1;
+			}
+		}
 	}else if(url.indexOf('&') == -1) {
 		strs = url.split("=");
 		typeId = strs[1].trim();
+		noteListCurrentPage = 1;
 		subTypeId = -1;//-1，代表全部，1，2，3、、、代表不同的类别
 	}
 	
@@ -36,6 +48,7 @@ function doSearch() {
 		url : "../noteList",
 		async : false,
 		data : {
+			currentPage : noteListCurrentPage,
 			tid : typeId,
 			subType : subTypeId
 		},

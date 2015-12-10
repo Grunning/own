@@ -6,7 +6,7 @@ import com.jfinal.core.Controller;
 
 public class IndexController extends Controller {
 
-	private final int PAGE_NUM = 5;
+	private final int PAGE_NUM = 3;
 
 	// 查询所有的记录
 	public void index() {
